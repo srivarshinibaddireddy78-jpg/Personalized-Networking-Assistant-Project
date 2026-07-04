@@ -1,0 +1,26 @@
+import google.generativeai as genai
+from backend.config import GEMINI_API_KEY
+
+genai.configure(api_key=GEMINI_API_KEY)
+
+model = genai.GenerativeModel("gemini-2.5-flash")
+
+
+class FactChecker:
+
+    def verify(self, text):
+        prompt = f"""
+You are an AI fact-checking assistant.
+
+Verify whether the following networking advice is accurate.
+
+If the information is correct, say "Verified".
+
+If there are mistakes, explain them briefly.
+
+Text:
+{text}
+"""
+
+        response = model.generate_content(prompt)
+        return response.text
