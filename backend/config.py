@@ -1,8 +1,8 @@
 import os
+from dotenv import load_dotenv
 
-# Google Gemini API Key
-GEMINI_API_KEY =os.getenv ("GEMINI_API_KEY")
+load_dotenv()
 
-# Application Name
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
 APP_NAME = "Personalized Networking Assistant"
-
