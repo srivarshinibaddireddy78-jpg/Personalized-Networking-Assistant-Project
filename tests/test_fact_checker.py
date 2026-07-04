@@ -1,0 +1,1 @@
+def test_fact_checker(): assert True
