@@ -394,3 +394,52 @@ if st.button("📜 Show History"):
 
     except Exception as e:
         st.error(f"Error: {e}")
+
+# -------------------------------
+# ⭐ Feedback
+# -------------------------------
+
+import os
+import json
+
+st.markdown("---")
+st.header("⭐ Feedback")
+
+feedback = st.text_area(
+    "Enter your feedback",
+    placeholder="Share your experience with the Personalized Networking Assistant."
+)
+
+if st.button("Submit Feedback"):
+
+    if feedback.strip() == "":
+        st.warning("Please enter your feedback.")
+
+    else:
+        try:
+            # Save feedback.json in the project root folder
+            feedback_file = os.path.join(os.getcwd(), "feedback.json")
+
+            # Read existing feedback
+            if os.path.exists(feedback_file):
+                with open(feedback_file, "r") as file:
+                    try:
+                        feedback_data = json.load(file)
+                    except json.JSONDecodeError:
+                        feedback_data = []
+            else:
+                feedback_data = []
+
+            # Add new feedback
+            feedback_data.append({
+                "feedback": feedback
+            })
+
+            # Save updated feedback
+            with open(feedback_file, "w") as file:
+                json.dump(feedback_data, file, indent=4)
+
+            st.success("✅ Feedback submitted successfully!")
+
+        except Exception as e:
+            st.error(f"❌ Error saving feedback: {e}")
