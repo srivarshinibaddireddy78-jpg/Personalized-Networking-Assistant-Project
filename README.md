@@ -154,7 +154,7 @@ http://127.0.0.1:8000/docs
 # ▶️ Run Frontend
 
 ```bash
-streamlit run frontend/streamlit_app.py
+python -m streamlit run frontend/streamlit_app.py
 ```
 
 Frontend:
@@ -185,61 +185,36 @@ Example Output
 
 ## 🏠 Home Page
 
-> Add screenshot here
-
-```
-images/home_page.png
-```
-
+![Home Page](images/home_page.png)
 ---
 
 ## 📝 Event Analysis
 
-> Add screenshot here
-
-```
-images/event_analysis.png
-```
+![Event Analysis](images/event_analysis.png)
 
 ---
 
 ## 💬 Conversation Starters
 
-> Add screenshot here
-
-```
-images/conversation_starters.png
-```
+![Conversation Starters](images/conversation_starters.png)
 
 ---
 
 ## 🌐 Fact Checker
 
-> Add screenshot here
-
-```
-images/fact_checker.png
-```
+![Fact Checker](images/fact_checker.png)
 
 ---
 
-## 📄 PDF Report
+## 📄 Swagger Documentation
 
-> Add screenshot here
-
-```
-images/pdf_report.png
-```
+![Swagger Documentation](images/swagger_docs.png)
 
 ---
 
 ## 📚 Conversation History
 
-> Add screenshot here
-
-```
-images/history.png
-```
+![Conversation History](images/conversation_history.png)
 
 ---
 
