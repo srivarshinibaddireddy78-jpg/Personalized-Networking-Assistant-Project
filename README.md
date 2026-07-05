@@ -217,6 +217,11 @@ Example Output
 ![Conversation History](images/conversation_history.png)
 
 ---
+# 🧪 Running Tests
+
+Example Output
+
+![Test Results](images/test_results.png)
 
 # 🔮 Future Enhancements
 
